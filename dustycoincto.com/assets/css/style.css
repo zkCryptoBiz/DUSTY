@@ -1,0 +1,578 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(../font/MamaBear.otf);
+}
+
+@font-face {
+    font-family: Stopbuck;
+    src: url(../font/Stopbuck.ttf);
+}
+
+@font-face {
+    font-family: coconutz;
+    src: url(../font/coconutz.otf);
+}
+
+@font-face {
+    font-family: Wintermouse;
+    src: url(https://boysclubdusty.com/assets/font/Mrs.\ Wintermouse.ttf);
+}
+
+h2 {
+    font-family: font1;
+}
+
+h1 {
+    font-family: Wintermouse;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+
+body {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 400;
+    color: #000;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 1.5vw;
+    font-family: coconutz;
+}
+
+
+
+/* - ======================== Loading overlay ============================*/
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Loader animation */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.header {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    background-image: url('../images/header.gif');
+    height: 70vw;
+    padding: 0vw 5vw 5vw 5vw;
+    position: relative;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+    max-width: 80%;
+    padding: 0vw 2vw;
+    border-radius: 8px;
+    border: 4px solid #201A17;
+    font-family: font1;
+    color: #201A17;
+    margin: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 3vw;
+    width: 100%;
+    font-family: Wintermouse;
+}
+
+nav a:first-child {
+    color: #EE332A;
+}
+
+nav a {
+    font-size: 1.5vw;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #EE332A;
+}
+
+nav img {
+    width: 100%;
+    max-width: 5vw;
+    transform: scale(1.6);
+}
+
+.links_main {
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+    position: relative;
+    z-index: 99;
+    top: 8vw;
+    flex-wrap: wrap;
+}
+
+.links_main a img {
+    width: 100%;
+    max-width: 8vw;
+
+}
+
+.links_main a {
+    transition: all 0.3s ease-in-out;
+}
+
+.links_main a:hover {
+    transform: scale(1.1);
+}
+
+
+.header .zoominout {
+    width: 20vw;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 1vw;
+    /* animation: zoom 2s ease-in-out infinite; */
+
+}
+
+.header .zoominout:hover {
+    transform: scale(1.1);
+}
+
+
+/* Keyframes for zoom in and zoom out effect */
+@keyframes zoom {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Adjust scale as needed for zoom in */
+    }
+}
+
+
+/* about  */
+
+.about {
+    background-color: #FF8B8B;
+    padding: 8vw 5vw 7vw 5vw;
+    border-top: 0.4vw solid #000;
+    border-bottom: 0.4vw solid #000;
+}
+
+.about h1 {
+    font-size: 6vw;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    color: #fff;
+    line-height: 6vw;
+}
+
+.about .box-1 {
+    position: relative;
+}
+
+.about .box-1 .img-2 {
+    position: absolute;
+    bottom: -5vw;
+    right: 0;
+    width: 20vw;
+}
+
+.about .box-2 {
+    position: relative;
+}
+
+.about .box-2 .img-2 {
+    position: absolute;
+    bottom: -8vw;
+    right: -3vw;
+    width: 13vw;
+}
+
+/* WE_ARE_DUSTY  */
+
+.WE_ARE_DUSTY .box_1 {
+    padding: 5vw;
+    background-color: #FFE0B1;
+    border-right: 0.4vw solid #000;
+    position: relative;
+}
+
+.WE_ARE_DUSTY .box_1 .sticker {
+    position: absolute;
+    right: 5vw;
+    bottom: -5vw;
+    width: 15vw;
+    animation: move-bottom-top 3s infinite ease-in-out;
+}
+
+@keyframes move-bottom-top {
+    0% {
+        transform: translateY(10vw);
+    }
+
+
+    100% {
+        transform: translateY(-5vw);
+    }
+}
+
+.WE_ARE_DUSTY .box_2 .sticker {
+    position: absolute;
+    right: 5vw;
+    bottom: 0;
+    width: 20vw;
+}
+
+.WE_ARE_DUSTY .box_1 h1 {
+    font-size: 8vw;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    color: #fff;
+    line-height: 8vw;
+}
+
+.WE_ARE_DUSTY .box_2 {
+    padding: 5vw;
+    background-color: #FFDCDB;
+    position: relative;
+}
+
+.WE_ARE_DUSTY .box_2 h1 {
+    font-size: 8vw;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    color: #fff;
+    line-height: 8vw;
+}
+
+
+
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.btn img {
+    width: 5vw;
+}
+
+.btn h2 {
+    font-size: 2vw;
+}
+
+
+/* slider */
+
+marquee {
+    background-color: #FFBC1E;
+    padding: 2vw 0vw;
+    border-top: 0.4vw solid #000;
+    border-bottom: 0.4vw solid #000;
+    position: relative;
+    z-index: 999;
+}
+
+
+
+.slider {
+    font-size: 2vw;
+}
+
+
+.book {
+    background-color: #e8f7f7;
+    padding: 3vw 10vw;
+    position: relative;
+    z-index: 99;
+    margin-top: -0.5vw;
+}
+
+
+.book h1 {
+    font-size: 6vw;
+    color: #000;
+    line-height: 6vw;
+    text-align: center;
+}
+
+
+.book a {
+    font-family: coconutz;
+    font-size: 2vw;
+    display: block;
+    line-height: 2vw;
+    text-decoration: underline;
+}
+
+.main {
+    border-top: 0.4vw solid #000;
+    border-bottom: 0.4vw solid #000;
+}
+
+.tokenomice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #80ABFF;
+    padding: 5vw 2vw 0 2vw;
+    background-image: url("../images/tok-bg.png");
+}
+
+.tokenomice h1 {
+    font-size: 7vw;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    color: #fff;
+    line-height: 7vw;
+    margin-bottom: 3vw;
+}
+
+.address {
+    background-color: #C9EEFF;
+    width: fit-content;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    position: relative;
+    border: 2px solid #000;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+}
+
+.address p {
+    font-size: 2vw;
+}
+
+.address button {
+    position: absolute;
+    right: -2vw;
+    bottom: -2.5vw;
+
+}
+
+.address button img {
+    width: 4vw;
+}
+
+/* Slider Container */
+.slider_main {
+    margin-top: 5vw;
+    overflow: hidden;
+}
+
+.slider_main .inner {
+    display: flex;
+    gap: 2vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Images */
+.slider_main .inner img {
+    width: calc(100% / 4);
+    flex-shrink: 0;
+    max-width: 20.3vw;
+    object-fit: contain;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.buttons img {
+    width: 7vw;
+}
+
+
+.tok_bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.tok_bottom h1 {
+    font-size: 3vw;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    color: #fff;
+    line-height: 3vw;
+    margin-bottom: 3vw;
+    text-align: center;
+}
+
+
+.moving_comix_scroll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+    background: #FCD03C;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+}
+
+.moving_comix_scroll .moving_comix_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.moving_comix_scroll .moving_comix_content .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1vw;
+    gap: 0.5vw;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.moving_comix_scroll .moving_comix_content .item img {
+    width: 23rem;
+    height: 23rem;
+}
+
+/* roadmap  */
+.roadmap {
+    position: relative;
+}
+
+.roadmap h1 {
+    font-size: 7vw;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    color: #fff;
+    line-height: 7vw;
+    margin-bottom: 3vw;
+    position: absolute;
+    left: 35vw;
+    top: 5vw;
+}
+
+.roadmap .sticker {
+    position: absolute;
+    left: 10vw;
+    top: 6vw;
+    width: 14vw;
+}
+
+.join {
+    margin-top: -2vw;
+}
+
+footer {
+    background-color: #FF7272;
+    padding: 5vw 5vw 2vw 5vw;
+    margin-top: -2vw;
+}
+
+.footer_links {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    flex-wrap: wrap;
+}
+
+
+
+footer .links {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .links a {
+    display: block;
+    font-family: Wintermouse;
+    color: #fff;
+    font-size: 1.7vw;
+    margin-bottom: 1.5vw;
+}
+
+footer hr {
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+}

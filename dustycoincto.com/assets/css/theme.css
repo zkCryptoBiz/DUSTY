@@ -1,0 +1,218 @@
+ @media screen and (max-width: 480px) {
+
+     body,
+     html {
+         overflow-x: hidden;
+     }
+
+     p {
+         font-size: 4vw;
+     }
+
+     .links a img {
+         width: 100%;
+         max-width: 5vw;
+     }
+
+     .header .zoominout {
+         width: 25vw;
+     }
+
+     .header .zoominout:hover {
+         transform: scale(1.1);
+     }
+
+     nav {
+         width: 100%;
+         max-width: 95%;
+         padding: 1vw 2vw;
+         border: 2px solid #201A17;
+         top: 3vw;
+
+     }
+
+     nav a {
+         font-size: 2vw;
+     }
+
+     nav img {
+         transform: scale(2.2);
+     }
+
+     /* about  */
+
+
+     .about h1 {
+         font-size: 14vw;
+         -webkit-text-stroke-color: black;
+         -webkit-text-stroke-width: 2px;
+         color: #fff;
+         line-height: 15vw;
+     }
+
+
+     .about .box-1 .img-2 {
+         width: 40vw;
+     }
+
+
+
+     .about .box-2 .img-2 {
+         position: absolute;
+         bottom: -14vw;
+         right: -3vw;
+         width: 20vw;
+         z-index: 9999;
+     }
+
+     .btn {
+         display: flex;
+         align-items: center;
+         gap: 1vw;
+     }
+
+     .btn img {
+         width: 5vw;
+     }
+
+     .btn h2 {
+         font-size: 4vw;
+     }
+
+     .slider {
+         font-size: 3vw;
+     }
+
+     .book {
+         margin-top: -1.5vw;
+         padding: 10vw;
+     }
+
+     .book a {
+         font-size: 5vw;
+         line-height: 5vw;
+     }
+
+     .book h1 {
+         font-size: 8vw;
+         color: #000;
+         line-height: 8vw;
+         text-align: center;
+     }
+
+     /* tokenomice */
+
+     .tokenomice h1 {
+         font-size: 14vw;
+         -webkit-text-stroke-color: black;
+         -webkit-text-stroke-width: 2px;
+         color: #fff;
+         line-height: 14vw;
+         margin-bottom: 3vw;
+     }
+
+
+     .address p {
+         font-size: 3.2vw;
+     }
+
+     .address {
+         padding: 1vw 4vw;
+
+     }
+
+     .address button {
+         position: absolute;
+         right: -3vw;
+         bottom: -4.5vw;
+
+     }
+
+     .address button img {
+         width: 7vw;
+     }
+
+     .slider_main .inner img {
+         width: calc(100% / 2);
+         max-width: 44.3vw;
+     }
+
+     .buttons {
+         margin-top: 4vw;
+         gap: 4vw;
+     }
+
+     .buttons img {
+         width: 10vw;
+     }
+
+     .tok_bottom {
+         display: flex;
+         align-items: end;
+         justify-content: space-between;
+     }
+
+     .tok_bottom h1 {
+         font-size: 5vw;
+         -webkit-text-stroke-color: black;
+         -webkit-text-stroke-width: 1px;
+         color: #fff;
+         line-height: 5vw;
+         margin-bottom: 3vw;
+         text-align: center;
+     }
+
+     .tok_2 {
+         width: 50vw;
+     }
+
+     .tok_1 {
+         width: 23vw;
+     }
+
+     .moving_comix_scroll {
+         border-top: 2px solid #000000;
+         border-bottom: 2px solid #000000;
+     }
+
+     .moving_comix_scroll .moving_comix_content .item {
+         gap: 0.5rem;
+         padding: 3vw 1vw;
+     }
+
+
+
+     .moving_comix_scroll .moving_comix_content .item img {
+
+         width: 7rem;
+         height: 7rem;
+     }
+
+     .roadmap h1 {
+         font-size: 10vw;
+         line-height: 10vw;
+         left: 30vw;
+     }
+
+     .footer_links img {
+         width: 10vw;
+     }
+
+     footer .links a {
+         display: block;
+         font-family: Wintermouse;
+         color: #fff;
+         font-size: 6.7vw;
+         margin-bottom: 1.5vw;
+     }
+
+     .logo img {
+         margin: auto;
+     }
+
+     footer hr {
+         margin-top: 5vw;
+         margin-bottom: 4vw;
+     }
+
+ }

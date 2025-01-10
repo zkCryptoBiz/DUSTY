@@ -1,0 +1,116 @@
+ .bouncing-box {
+   animation: bounce 1.5s infinite ease-in-out;
+ }
+
+ @keyframes bounce {
+
+   0%,
+   100% {
+     transform: translateY(0);
+   }
+
+   50% {
+     transform: translateY(-10px);
+   }
+ }
+
+
+ .rotating {
+   animation: rotate-left-right 1s infinite ease-in-out;
+ }
+
+ @keyframes rotate-left-right {
+
+   0%,
+   100% {
+     transform: rotate(0deg);
+   }
+
+   50% {
+     transform: rotate(3deg);
+   }
+
+   75% {
+     transform: rotate(-3deg);
+   }
+ }
+
+
+
+ #btnMain {
+   position: relative;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .popupFace {
+   position: absolute;
+   width: 50px;
+   /* Adjust size as needed */
+   height: 50px;
+   opacity: 0;
+   transform: scale(0);
+   transition: opacity 0.3s, transform 0.3s;
+ }
+
+ .bubble {
+   animation: bubbleUp 1s ease-out forwards;
+ }
+
+ @keyframes bubbleUp {
+   0% {
+     transform: translateY(0) scale(1);
+     opacity: 1;
+   }
+
+   50% {
+     transform: translateY(-50px) scale(1.5);
+     opacity: 0.8;
+   }
+
+   100% {
+     transform: translateY(-100px) scale(0.5);
+     opacity: 0;
+   }
+ }
+
+
+
+ #btnMain {
+   position: relative;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ #popupFace_1 {
+   position: absolute;
+   width: 5vw;
+   opacity: 0;
+   transform: scale(0);
+   transition: opacity 0.3s, transform 0.3s;
+ }
+
+ .bubble {
+   animation: bubbleUp 1s ease-out forwards;
+ }
+
+ @keyframes bubbleUp {
+   0% {
+     transform: translateY(0) scale(1);
+     opacity: 1;
+   }
+
+   50% {
+     transform: translateY(-50px) scale(1.5);
+     opacity: 0.8;
+   }
+
+   100% {
+     transform: translateY(-100px) scale(0.5);
+     opacity: 0;
+   }
+ }
