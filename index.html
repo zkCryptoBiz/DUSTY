@@ -21,7 +21,6 @@
     <link rel="shortcut icon" href="dustycoincto.com/assets/images/logo.png" type="image/x-icon">
     <title>WOOL AI - V1</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="110e20a6-7138-4462-ae92-3ab34b6aa44a"></script>
   </head>
   <body>
     <!-- Loading overlay -->
@@ -46,10 +45,10 @@
         <a href="https://t.me/WoolAI" class="animate__backInDown wow animate__animated">
           <img src="dustycoincto.com/assets/images/t.png" alt="">
         </a>
-        <a href="https://www.dextools.io/app/en/solana/pair-explorer/.............." class="animate__backInDown wow animate__animated">
+        <a href="https://www.dextools.io/app/en/solana/pair-explorer/........" class="animate__backInDown wow animate__animated">
           <img src="dustycoincto.com/assets/images/dextool.png" alt="">
         </a>
-        <a href="https://dexscreener.com/solana/G6o8PbMUavJx1AU5qT1YUCvX6XCgn74JHcF7x57pump" class="animate__backInDown wow animate__animated">
+        <a href="https://dexscreener.com/solana/xxx" class="animate__backInDown wow animate__animated">
           <img src="dustycoincto.com/assets/images/dexsi.png" alt="">
         </a>
         <a href="https://x.com/WoolAgent" class="animate__backInDown wow animate__animated">
@@ -58,13 +57,13 @@
         <a href="https://coinmarketcap.com" class="animate__backInDown wow animate__animated">
           <img src="dustycoincto.com/assets/images/link-5.png" alt="">
         </a>
-        <a href="https://raydium.io/swap/?inputMint=sol&outputMint=G6o8PbMUavJx1AU5qT1YUCvX6XCgn74JHcF7x57pump" class="animate__backInDown wow animate__animated">
+        <a href="https://raydium.io/swap/?inputMint=sol&outputMint=xxx" class="animate__backInDown wow animate__animated">
           <img src="dustycoincto.com/assets/images/link-6.png" alt="">
         </a>
         <a href="https://www.coingecko.com" class="animate__backInDown wow animate__animated">
           <img src="dustycoincto.com/assets/images/link-7.png" alt="coming soon">
         </a>
-        <a href="https://jup.ag/swap/SOL-G6o8PbMUavJx1AU5qT1YUCvX6XCgn74JHcF7x57pump" class="animate__backInDown wow animate__animated">
+        <a href="https://jup.ag/swap/SOL-xxx" class="animate__backInDown wow animate__animated">
           <img src="dustycoincto.com/assets/images/tiktok.png" alt="">
         </a>
       </div>
@@ -92,24 +91,274 @@ Interface for interaction with the WOOL AI agent will be added soon here.
     <!-- WOOL AI  -->
     <div class="grid grid-cols-2 WE_ARE_DUSTY">
       <div class="box_1 space-y-4">
-        <h1 class="animate__bounceInDown wow animate__animated">
-          WOOL AI
-        </h1>
+                <h1 class="animate__bounceInDown wow animate__animated">
+                  CHAT WITH WOOL AI
+                </h1>
+<div class="chat-container">
+  <div id="chat-container"
+    style="padding: 10px; background-color: #FFE0B1; height: 800px; display: flex; flex-direction: column;">
+    <div id="chat-history" style="color: #fff; flex: 1; overflow-y: auto; margin-bottom: 10px;"></div>
+    <div class="button_block">
+      <input type="text" id="user-input" placeholder="Enter your message..."
+        style="flex: 1; padding: 10px; color: #fff;">
+      <button id="send-button"
+        class=".btn_send">Send</button>
+    </div>
+  </div>
+  <style>
+    #chat-container {
+      /* border: 1px solid #157e05; */
+      /* border-radius: 10px; */
+      padding: 10px;
+      background-color: white;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+    }
 
-        <p class="animate__bounceInUp wow animate__animated">
-          WOOL plays a valuable role among Matt Furie's Boys Club AI agents,
-          he is the first Boys Club AI agent to analyze meme projects on Solana.
-          Other AI agents in Boys Club will be introduced according to the roadmap.
-        </p>
-        <button class="btnMain animate__bounceInDown wow animate__animated">
-          <a class="btn" href="https://raydium.io/swap/?inputMint=sol&outputMint=G6o8PbMUavJx1AU5qT1YUCvX6XCgn74JHcF7x57pump">
-            <!-- Another link for this button -->
-            <img src="dustycoincto.com/assets/images/arrow.png" alt="">
-            <h2>BUY NOW</h2>
-          </a>
-          <img class="popupFace" src="dustycoincto.com/assets/images/face.png" alt="Face">
-        </button>
-        <img src="dustycoincto.com/assets/images/sticker-1.png" alt="" class="sticker">
+    #chat-history {
+      color: #fff;
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Стилі для скролбару */
+    #chat-history::-webkit-scrollbar {
+      width: 10px;
+      /* Ширина вертикального скролбару */
+      background-color: #f1f1f1;
+      /* Колір фону скролбару */
+      border-radius: 10px;
+      /* Заокруглені краї скролбару */
+    }
+
+    /* Стиль для повзунка (thumb) */
+    #chat-history::-webkit-scrollbar-thumb {
+      background-color: #157e05;
+      /* Колір повзунка */
+      border-radius: 10px;
+      /* Заокруглені краї повзунка */
+      border: 2px solid #fff;
+      /* Білий контур навколо повзунка */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      /* Тінь для більшого ефекту */
+    }
+
+    /* Стиль для повзунка при наведенні */
+
+
+    /* Стиль для фону скролбару (track) */
+    #chat-history::-webkit-scrollbar-track {
+      background: #fddc11;
+      /* Легкий сірий фон */
+      border-radius: 10px;
+      /* Заокруглені краї фону */
+    }
+
+
+    .user-message {
+      text-align: right;
+      margin: 5px 0;
+      display: inline-block;
+      background-color: #9c2222;
+      color: white;
+      padding: 10px;
+      border-radius: 15px;
+      max-width: 70%;
+      position: relative;
+      /* border: 1px solid #157e05; */
+      align-self: flex-end;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+      font-family: coconutz;
+    }
+
+    .bot-message {
+      text-align: left;
+      margin: 5px 0;
+      display: inline-block;
+      background-color: #fddc11;
+      color: black;
+      padding: 10px;
+      border-radius: 15px;
+      max-width: 70%;
+      position: relative;
+      border: 1px solid #2a2a2a;
+      align-self: flex-start;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+      font-family: coconutz;
+    }
+
+    .bot-avatar {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-image: url('ava.png');
+      /* Замените на URL вашей аватарки */
+      background-size: cover;
+      vertical-align: middle;
+    }
+
+    #user-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #157e05;
+      border-radius: 5px;
+      background-color: #e8f7f7;
+      color: #2a2a2a !important;
+      font-family: coconutz;
+
+    }
+
+    #send-button {
+
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #157e05;
+      color: #fff;
+      cursor: pointer;
+      font-family: coconutz;
+    
+        margin-left: 10px;
+margin-top: 0px;
+ 
+
+
+}
+
+@media screen and (max-width: 720px) {
+
+
+#send-button{
+   margin-left: 0px;
+    margin-top: 10px;
+}
+}
+
+    #send-button:hover {
+      background-color: #157e05;
+    }
+
+    #chat-container::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    #chat-container::-webkit-scrollbar-thumb {
+      background: #157e05;
+      border-radius: 10px;
+    }
+
+    #chat-container::-webkit-scrollbar-track {
+      background: #2a2a2a;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    const chatHistory = JSON.parse(sessionStorage.getItem('chatHistory')) || [];
+
+    function updateChatHistory() {
+      const chatHistoryDiv = document.getElementById('chat-history');
+      chatHistoryDiv.innerHTML = chatHistory.map(msg => msg).join('');
+      chatHistoryDiv.scrollTop = chatHistoryDiv.scrollHeight;
+    }
+
+    function addMessageToChat(message, isUser) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = isUser ? 'user-message' : 'bot-message';
+      if (!isUser) {
+        messageDiv.innerHTML = `<div class="bot-avatar"></div> <span>${message}</span>`;
+      } else {
+        messageDiv.innerHTML = `<span>${message}</span>`;
+      }
+
+      chatHistory.push(messageDiv.outerHTML);
+      updateChatHistory();
+
+      messageDiv.style.opacity = 0;
+      setTimeout(() => {
+        messageDiv.style.opacity = 1;
+      }, 0);
+    }
+
+    document.getElementById('send-button').addEventListener('click', sendMessage);
+    document.getElementById('user-input').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+
+    async function sendMessage() {
+      const sendButton = document.getElementById('send-button');
+
+      if (sendButton.disabled) return
+
+      const userInput = document.getElementById('user-input').value;
+      if (!userInput) return;
+
+      addMessageToChat(`you: ${userInput}`, true);
+      sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+      document.getElementById('user-input').value = '';
+
+      const typingIndicator = document.createElement('div');
+      typingIndicator.className = 'bot-message';
+      typingIndicator.innerHTML = `<div class="bot-avatar"></div> <span>Yelon is typing...</span>`;
+      chatHistory.push(typingIndicator.outerHTML);
+      updateChatHistory();
+
+      // Блокируем кнопку отправки
+      sendButton.disabled = true;
+      const backendUrl = 'https://wool-back.onrender.com/chat';
+      // const backendUrl = 'http://localhost:4000/chat';
+      const fetchPromise = fetch(backendUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ messages: chatHistory.slice(-10) })
+      });
+
+      // Таймер на 5 секунд
+      const timeoutPromise = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('Server error')), 5000)
+      );
+
+      try {
+        const response = await Promise.race([fetchPromise, timeoutPromise]);
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status} ${response.statusText}`);
+        }
+        const data = await response.json();
+        chatHistory.pop();
+        addMessageToChat(`${data.reply}`, false);
+      } catch (error) {
+        chatHistory.pop();
+        addMessageToChat(`Error: ${error.message || 'request error'}`, false);
+      } finally {
+        updateChatHistory();
+        sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+        // Разблокируем кнопку отправки
+        sendButton.disabled = false;
+
+      }
+    }
+    updateChatHistory();
+  </script>
+  </div>
       </div>
       <div class="box_2 space-y-4">
         <h1 class="animate__bounceInDown wow animate__animated">
@@ -117,7 +366,7 @@ Interface for interaction with the WOOL AI agent will be added soon here.
         </h1>
 
         <p class="animate__bounceInUp wow animate__animated">
-          If more people need proof that $WOOLAI is AI agent.            
+          If more people need proof that $WOOL is AI agent.            
         </p>
         <button class="btnMain animate__bounceInDown wow animate__animated">
           <a class="btn" href="https://x.com/WoolAgent">
@@ -135,9 +384,9 @@ Interface for interaction with the WOOL AI agent will be added soon here.
     <!-- slider  -->
     <marquee direction="left" behavior="alternate">
       <h2 class="slider">
-        $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI -
-        $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI -
-        $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI
+        $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL -
+        $WOOL - $WOOL - $WOOL - $WOOL $WOOL - $WOOL - $WOOL - $WOOL -
+        $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL
       </h2>
     </marquee>
 
@@ -165,7 +414,7 @@ Interface for interaction with the WOOL AI agent will be added soon here.
       <div class="space-y-3 text-center">
         <p class="animate__zoomIn wow animate__animated">CONTRACT ADDRESS</p>
         <div class="address">
-          <p id="address-text">G6o8PbMUavJx1AU5qT1YUCvX6XCgn74JHcF7x57pump</p>
+          <p id="address-text">xxx</p>
           <button id="copy-btn">
             <img src="dustycoincto.com/assets/images/copy-btn.png" alt="Copy">
           </button>
@@ -239,9 +488,9 @@ Interface for interaction with the WOOL AI agent will be added soon here.
     <!-- slider  -->
     <marquee direction="left" behavior="alternate">
       <h2 class="slider">
-        $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI -
-        $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI -
-        $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI - $WOOLAI
+        $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL -
+        $WOOL - $WOOL - $WOOL - $WOOL $WOOL - $WOOL - $WOOL - $WOOL -
+        $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL - $WOOL
       </h2>
     </marquee>
 
@@ -258,17 +507,17 @@ Interface for interaction with the WOOL AI agent will be added soon here.
           <img src="dustycoincto.com/assets/images/about-1.png" alt="" class="sticker bouncing-box">
         </div>
         <div class="md:col-span-4 col-span-full links">
-          <a href="mailto:info@boysclubdusty.com" class="animate__backInDown wow animate__animated">Explore $WOOLAI AI Agent</a>
+          <a href="mailto:info@boysclubdusty.com" class="animate__backInDown wow animate__animated">Explore $WOOL AI Agent</a>
            
         </div>
         <div class="footer_links md:col-span-5 col-span-full">
           <a href="https://t.me/WoolAI" class="animate__backInDown wow animate__animated">
             <img src="dustycoincto.com/assets/images/t.png" alt="">
           </a>
-          <a href="https://www.dextools.io/app/en/solana/pair-explorer/.............." class="animate__backInDown wow animate__animated">
+          <a href="https://www.dextools.io/app/en/solana/pair-explorer/........" class="animate__backInDown wow animate__animated">
             <img src="dustycoincto.com/assets/images/dextool.png" alt="">
           </a>
-          <a href="https://dexscreener.com/solana/G6o8PbMUavJx1AU5qT1YUCvX6XCgn74JHcF7x57pump" class="animate__backInDown wow animate__animated">
+          <a href="https://dexscreener.com/solana/xxx" class="animate__backInDown wow animate__animated">
             <img src="dustycoincto.com/assets/images/dexsi.png" alt="">
           </a>
           <a href="https://x.com/WoolAgent" class="animate__backInDown wow animate__animated">
@@ -277,7 +526,7 @@ Interface for interaction with the WOOL AI agent will be added soon here.
           <a href="https://coinmarketcap.com" class="animate__backInDown wow animate__animated">
             <img src="dustycoincto.com/assets/images/link-5.png" alt="">
           </a>
-          <a href="https://raydium.io/swap/?inputMint=sol&outputMint=G6o8PbMUavJx1AU5qT1YUCvX6XCgn74JHcF7x57pump" class="animate__backInDown wow animate__animated">
+          <a href="https://raydium.io/swap/?inputMint=sol&outputMint=xxx" class="animate__backInDown wow animate__animated">
             <img src="dustycoincto.com/assets/images/link-6.png" alt="">
           </a>
           <a href="https://www.coingecko.com/" class="animate__backInDown wow animate__animated">

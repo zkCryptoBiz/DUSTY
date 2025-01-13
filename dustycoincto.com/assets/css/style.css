@@ -576,3 +576,41 @@ footer p {
     text-align: center;
     color: #fff;
 }
+
+.button_block{
+    display: flex;
+    margin-top: 10px;
+    
+    flex-direction: row;
+}
+.btn_send {
+    
+
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #157e05;
+            color: #fff;
+            cursor: pointer;
+            font-family: coconutz;
+        
+    margin-left: 0px;
+    margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #157e05;
+        color: #fff;
+        cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+
+.button_block {
+    flex-direction: column;
+    }
+.btn_send{
+margin-left: 10px;
+margin-top: 0px;
+}
+}
